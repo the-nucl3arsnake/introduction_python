@@ -38,16 +38,19 @@ while credit > 0:
 	
 # Verification gain
 	if nbreAlea == pariChiffre:
-		print(" Bravo, vous avez gagné")
-		credit = pariArgent * 3
-		print("Il vous reste: ",credit," credits")
+		victoire = True
 	if pariChiffre % 2 == 0 and nbreAlea % 2 == 0:
-		print("Nombre pair comme le pari. Vous recuperez 50% des paris")
-		pariArgent = pariArgent / 2
-		credit = math.ceil(pariArgent)
-		print("Il vous reste: ",credit," credit",)
+		doublePair = True
 	if pariChiffre % 2 == 1 and nbreAlea == 1:
-		print("Nombre impair comme le pari. Vous recuperez 50% des paris")
-		pariArgent= pariArgent / 2
-		credit = math.ceil(pariArgent)
-		print("il vous reste: ",credit," crédits")
+		doublePair = False
+		
+	if victoire = True:
+		credit = pariArgent * 3
+		print(" Bravo, vous avez gagné. Il vous reste",credit, "credits")
+	elif doublePair = True or doublePair = False:
+		pariArgent = pariArgent / 2
+		credit = math.ceil(credit - pariArgent)
+		print("Demi-victoire. il vous reste: ",credit," credits." )
+	else:
+		credit = credit - pariArgent
+		print("Désolé vous avez perdu. Il vous reste: ",credit," credits")
