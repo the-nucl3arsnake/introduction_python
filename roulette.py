@@ -39,6 +39,8 @@ while credit > 0:
 # Verification gain
 	if nbreAlea == pariChiffre:
 		print(" Bravo, vous avez gagné")
+		credit = pariArgent * 3
+		print("Il vous reste: ",credit," credits")
 	if pariChiffre % 2 == 0 and nbreAlea % 2 == 0:
 		print("Nombre pair comme le pari. Vous recuperez 50% des paris")
 		pariArgent = pariArgent / 2
