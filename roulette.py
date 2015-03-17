@@ -1,6 +1,6 @@
 # Programme de roulette de casino
-import random
-import math
+from random import randrange
+from math import ceil
 
 # Définition du nombre de crédits du joueur
 credit = input("Combien de Crédits avez-vous? ")
